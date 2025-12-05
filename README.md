@@ -1,5 +1,6 @@
 # bapp
 The early workings for a new programming framework and package manager.
+(This will probably end up terribly but it will be a fun experiment regardless. I'll probably never actually get around to creating it, but this is a start.)
 
 The Bapp system will be built around BappScript, a new object-oriented programming language I eventually plan on creating. It will combine the best parts of both Scratch and Java into an easy-to-use and performant language. The syntax will be similar to Java, except with a few changes:
 
