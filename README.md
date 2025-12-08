@@ -17,3 +17,15 @@ The Bapp system will be built around BappScript, a new object-oriented programmi
 
 These changes make code more maintainable and they improve performance through the use of concurrency.
 For more information, see the wiki I'm writing.
+
+oh also in addition there will be the option to use a block-based language similar to Scratch and to do drag-and-drop UI design in the ShapeShift editor
+but that's late-stage and we probably won't get there for years
+first we need to design the language, then write the compiler and the Vulkan runtime, which should hopefully be done by the end of 2026 (although knowing me it probably won't and I may not have even gotten started), and also create a portable packaging format which runs everywhere and create a runtime based on wasmtime (that'll be easy once we've done the compiler since we can just get LLVM to generate WebAssembly code and then run it in wasmtime and the gui can be rendered by the vulkan engine), then we'll be halfway there.
+then we just gotta create a system which will enable widgets to be imported from Dart and React, and then import some standard widgets or make our own, and then it will basically be ready (except it won't run on Apple devices but eh they can make their own runtime)
+the goal is to enable developers to write their program once, using a standard set of widgets, and then it will automatically style those widgets to follow each platform's UI guidelines but that's still years away
+
+but also just to illustrate the point of how hard concurrency is in other languages and why BappScript's system is needed: Scratch and Greenfoot don't even bother with multithreaded concurrency. They fake it. And even Turbowarp, which is optimised for performance, fakes concurrency. (I got this information from Grok so it may not be fully accurate)
+no wonder most software is so slow
+<img width="2024" height="1598" alt="image" src="https://github.com/user-attachments/assets/978b9386-86b6-49f9-a77a-1bf7dea6ee41" />
+
+<img width="2024" height="1598" alt="image" src="https://github.com/user-attachments/assets/cec3f1e8-9836-49eb-8d1e-e2496a91f35b" />
