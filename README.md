@@ -11,9 +11,9 @@ The Bapp system will be built around BappScript, a new object-oriented programmi
 * simultaneously{} blocks - each line of code inside this block will run in its own thread
 * Objects can call methods in the object which created them; this enables shared state
 * All procedures run concurrently with the calling code, including object constructors
-* All functions are pure; they can access data and call other functions but can't modify data or call procedures
+* Functions can access data and call other functions but can't modify data or call procedures, so don't have any side-effects, improving maintainability and reusability
 * Functions can be static or exist inside objects but procedures and variables can only exist inside objects
 * Imports are objects
 
-These changes make code more maintainable by combining functional programming with object-oriented programming, and they improve performance through the use of concurrency.
+These changes make code more maintainable and they improve performance through the use of concurrency.
 For more information, see the wiki I'm writing.
