@@ -14,6 +14,7 @@ The Bapp system will be built around BappScript, a new object-oriented programmi
 * Functions can access data and call other functions but can't modify data or call procedures (except procedures which are part of objects which were constructed inside the object's scope), so don't have any side-effects, improving maintainability and reusability; they can't modify any parameters or call any procedures in objects which are passed as parameters unless they clone the object using the System.cloneObject() method
 * Functions can be static or exist inside objects but procedures and variables can only exist inside objects
 * Imports are objects
+* Like in Rust, all variables and objects have one owner, and will be deleted when that owner goes out of scope; however, BappScript allows references to objects to be passed as arguments into procedures, enabling concurrent modification; if the object is deleted, any references will be nulled, so if you try to access data from a reference to a deleted object, a NullPointerException will be thrown, and will have to be handled
 
 These changes make code more maintainable and they improve performance through the use of concurrency.
 For more information, see the wiki I'm writing.
