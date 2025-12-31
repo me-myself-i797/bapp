@@ -11,7 +11,7 @@ The Bapp system will be built around BappScript, a new object-oriented programmi
 * simultaneously{} blocks - each line of code inside this block will run in its own thread
 * Objects can call methods in the object which created them; this enables shared state
 * All procedures run concurrently with the calling code, including object constructors
-* Functions can access data and call other functions but can't modify data or call procedures (except procedures which are part of objects which were constructed inside the object's scope), so don't have any side-effects, improving maintainability and reusability; also function parameters are always by-value rather than by-reference, including for objects, whereas procedure parameters are more Java-style (objects are by-reference by default unless you use System.cloneObject())
+* Functions can access data and call other functions but can't modify data or call procedures (except procedures which are part of objects which were constructed inside the object's scope), so don't have any side-effects, improving maintainability and reusability; they can't modify any parameters or call any procedures in objects which are passed as parameters
 * Functions can be static or exist inside objects but procedures and variables can only exist inside objects
 * Imports are objects
 
